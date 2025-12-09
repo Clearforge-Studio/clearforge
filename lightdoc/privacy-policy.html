@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Politique de confidentialité – LightDoc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
+        <style>
+            :root {
+                --bg: #e8f5f4;
+                --card-bg: #ffffff;
+                --primary: #007a78;
+                --primary-soft: #0b8f8c;
+                --text-main: #102a43;
+                --text-muted: #5a7184;
+                --border-soft: #cbd5e1;
+                --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
+                --radius-lg: 18px;
+                --radius-pill: 999px;
+                --max-width: 860px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Roboto', 'Segoe UI',
+                    sans-serif;
+                background: radial-gradient(circle at top left, #f3fbfa 0, var(--bg) 50%);
+                color: var(--text-main);
+            }
+
+            body {
+                padding: 16px;
+                display: flex;
+                justify-content: center;
+            }
+
+            main {
+                width: 100%;
+                max-width: var(--max-width);
+            }
+
+            .card {
+                background: var(--card-bg);
+                border-radius: 26px;
+                padding: 24px 20px 28px;
+                box-shadow: var(--shadow-soft);
+                border: 1px solid rgba(15, 23, 42, 0.03);
+            }
+
+            @media (min-width: 768px) {
+                body {
+                    padding: 32px 24px;
+                }
+                .card {
+                    padding: 32px 40px 40px;
+                }
+            }
+
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 4px 14px;
+                border-radius: var(--radius-pill);
+                background: rgba(0, 122, 120, 0.08);
+                color: var(--primary);
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+            }
+
+            .badge-dot {
+                width: 7px;
+                height: 7px;
+                border-radius: 999px;
+                background: #22c55e;
+                box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+            }
+
+            h1 {
+                margin: 16px 0 4px;
+                font-size: clamp(1.7rem, 3vw, 2.1rem);
+                letter-spacing: -0.03em;
+            }
+
+            .subtitle {
+                margin: 0 0 12px;
+                color: var(--text-muted);
+                font-size: 0.95rem;
+            }
+
+            .meta {
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                margin-bottom: 20px;
+            }
+
+            .meta strong {
+                color: var(--primary-soft);
+            }
+
+            hr {
+                border: none;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+                margin: 16px 0 24px;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+                margin: 20px 0 8px;
+                letter-spacing: -0.01em;
+            }
+
+            h3 {
+                font-size: 1rem;
+                margin: 14px 0 6px;
+            }
+
+            p {
+                margin: 6px 0 10px;
+                line-height: 1.5;
+                font-size: 0.93rem;
+                color: var(--text-main);
+            }
+
+            ul {
+                margin: 6px 0 12px 1.1rem;
+                padding-left: 0.6rem;
+                color: var(--text-main);
+                font-size: 0.93rem;
+            }
+
+            li {
+                margin: 4px 0;
+            }
+
+            .pill-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin: 8px 0 14px;
+                padding: 0;
+                list-style: none;
+            }
+
+            .pill {
+                padding: 4px 10px;
+                border-radius: var(--radius-pill);
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                background: rgba(248, 250, 252, 0.85);
+                font-size: 0.8rem;
+                color: var(--text-muted);
+            }
+
+            .highlight {
+                background: rgba(0, 122, 120, 0.05);
+                border-left: 3px solid var(--primary);
+                padding: 8px 10px;
+                border-radius: 10px;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                margin-top: 4px;
+            }
+
+            .section-chip {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                padding: 2px 10px;
+                border-radius: var(--radius-pill);
+                background: rgba(15, 23, 42, 0.03);
+                color: var(--text-muted);
+                font-size: 0.78rem;
+                text-transform: uppercase;
+                letter-spacing: 0.07em;
+                margin-bottom: 4px;
+            }
+
+            .section-chip span {
+                width: 4px;
+                height: 4px;
+                border-radius: 999px;
+                background: rgba(148, 163, 184, 0.8);
+            }
+
+            a {
+                color: var(--primary-soft);
+            }
+
+            footer {
+                margin-top: 14px;
+                text-align: left;
+                font-size: 0.78rem;
+                color: var(--text-muted);
+            }
+
+            .dev-sign {
+                margin-top: 8px;
+                font-weight: 500;
+                color: var(--primary-soft);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="card">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Politique de confidentialité
+                </div>
+
+                <h1>LightDoc – Politique de confidentialité</h1>
+                <p class="subtitle">
+                    Cette page explique quelles données sont (ou ne sont pas) collectées lorsque vous utilisez
+                    l’application <strong>LightDoc</strong>.
+                </p>
+
+                <p class="meta">
+                    Dernière mise à jour : <strong>9 décembre 2025</strong><br />
+                    Développeur : <strong>ClearForge Studio</strong>
+                </p>
+
+                <hr />
+
+                <section>
+                    <div class="section-chip">Aperçu <span></span> Résumé rapide</div>
+                    <p>
+                        LightDoc est une application mobile qui permet de compresser, recadrer et convertir des
+                        documents (images, PDF) directement sur votre appareil.
+                    </p>
+                    <p class="highlight">
+                        Les traitements sont effectués <strong>localement sur votre téléphone</strong>. Nous ne créons
+                        aucun compte, ne stockons pas vos documents sur un serveur externe et ne les envoyons pas à un
+                        backend propriétaire.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>1. Données que nous traitons</h2>
+                    <h3>1.1. Fichiers et documents</h3>
+                    <p>
+                        Pour fonctionner, LightDoc doit accéder aux fichiers que vous lui fournissez (photos, images,
+                        documents scannés, etc.). Ces fichiers sont :
+                    </p>
+                    <ul>
+                        <li>Choisis manuellement par vous (galerie, fichiers, appareil photo) ;</li>
+                        <li>Traités localement pour la compression, le recadrage et/ou la conversion en PDF ;</li>
+                    </ul>
+                    <p>
+                        Ces documents <strong>ne sont jamais envoyés à un serveur du développeur</strong>. Ils restent
+                        sur votre appareil, sauf si vous décidez vous-même de les partager (e-mail, messageries, etc.).
+                    </p>
+
+                    <h3>1.2. Données techniques locales</h3>
+                    <p>L’application peut stocker localement certaines informations de configuration, par exemple :</p>
+                    <ul>
+                        <li>Vos préférences de qualité de compression ;</li>
+                        <li>Votre choix de format de sortie (JPG, PNG, PDF, etc.) ;</li>
+                        <li>L’état de vos achats in-app (activation de LightDoc Premium) ;</li>
+                        <li>Des informations nécessaires au bon fonctionnement de la publicité (voir plus bas).</li>
+                    </ul>
+                    <p>
+                        Ces données sont stockées dans la mémoire locale de l’application (par exemple via
+                        <em>SharedPreferences</em>) et ne sont pas envoyées au développeur.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>2. Publicité et identifiant publicitaire</h2>
+                    <p>
+                        La version gratuite de LightDoc peut afficher des
+                        <strong>publicités</strong> via le SDK <strong>Google Mobile Ads (AdMob)</strong>.
+                    </p>
+
+                    <h3>2.1. Identifiant publicitaire (AD_ID)</h3>
+                    <p>
+                        Sur Android, Google peut utiliser l’<strong>identifiant publicitaire</strong>
+                        de votre appareil afin de :
+                    </p>
+                    <ul>
+                        <li>Afficher des annonces ;</li>
+                        <li>Mesurer les performances des campagnes publicitaires ;</li>
+                        <li>Lutter contre la fraude et les usages abusifs.</li>
+                    </ul>
+
+                    <p class="highlight">
+                        Vous pouvez réinitialiser cet identifiant ou limiter la personnalisation des annonces dans les
+                        paramètres de votre appareil Android (&laquo;&nbsp;Google&nbsp;&raquo; &gt;
+                        &laquo;&nbsp;Annonces&nbsp;&raquo;).
+                    </p>
+
+                    <h3>2.2. Données collectées par AdMob</h3>
+                    <p>
+                        AdMob, en tant que service tiers fourni par Google, peut collecter certaines données techniques,
+                        par exemple :
+                    </p>
+                    <ul>
+                        <li>Identifiant publicitaire (AD_ID) ;</li>
+                        <li>Informations sur l’appareil (modèle, OS, langue, etc.) ;</li>
+                        <li>Données d’utilisation liées à l’affichage des annonces.</li>
+                    </ul>
+                    <p>
+                        Ces traitements sont régis par les propres politiques de Google. Pour plus de détails, veuillez
+                        consulter :
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">
+                                Règles de confidentialité de Google
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://policies.google.com/technologies/ads?hl=fr" target="_blank" rel="noopener">
+                                Comment Google utilise les données pour les annonces
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Achats in-app (LightDoc Premium)</h2>
+                    <p>
+                        LightDoc propose un achat in-app <strong>Premium</strong> (paiement unique, sans abonnement) qui
+                        débloque des fonctionnalités supplémentaires (mode batch, PDF fusionné, suppression des
+                        publicités, etc.).
+                    </p>
+
+                    <p>
+                        Les achats sont gérés par la plateforme de distribution (par exemple
+                        <strong>Google Play Store</strong>) via son propre système de facturation.
+                    </p>
+
+                    <p>Nous ne recevons pas vos informations de paiement.</p>
+                </section>
+
+                <section>
+                    <h2>4. Partage de données</h2>
+                    <p>
+                        Le développeur de LightDoc ne vend pas vos données personnelles et ne les partage pas avec des
+                        tiers, à l’exception des services nécessaires au fonctionnement de l’application, notamment :
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Google (AdMob)</strong> pour l’affichage des publicités dans la version gratuite ;
+                        </li>
+                        <li><strong>Google Play</strong> pour la gestion des achats in-app (Premium).</li>
+                    </ul>
+                    <p>
+                        Les documents que vous compressez, recadrez ou convertissez restent sur votre appareil, sauf si
+                        vous choisissez explicitement de les partager.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>5. Conservation des données</h2>
+                    <p>
+                        Les fichiers générés ou modifiés par LightDoc (images compressées, PDFs, archives ZIP, etc.)
+                        sont stockés sur votre appareil.
+                    </p>
+                    <p>
+                        Vous pouvez à tout moment supprimer ces fichiers manuellement depuis votre gestionnaire de
+                        fichiers ou votre galerie.
+                    </p>
+
+                    <p>
+                        Les préférences locales (qualité, format, état premium) sont conservées tant que vous ne
+                        désinstallez pas l’application ou ne videz pas ses données.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>6. Vos droits</h2>
+                    <p>
+                        En fonction de votre pays de résidence et de la législation applicable, vous pouvez disposer de
+                        droits relatifs à vos données personnelles (accès, rectification, suppression, opposition,
+                        etc.).
+                    </p>
+
+                    <p>
+                        Dans la mesure où LightDoc ne collecte pas directement de données nominatives sur un serveur du
+                        développeur, la plupart de ces droits s’exercent :
+                    </p>
+                    <ul>
+                        <li>via les paramètres de votre appareil (publicité, identifiant, etc.) ;</li>
+                        <li>via les paramètres de votre compte Google (Google Play, annonces, etc.).</li>
+                    </ul>
+
+                    <p>
+                        Pour toute question spécifique à votre situation, vous pouvez nous contacter (voir section
+                        suivante).
+                    </p>
+                </section>
+
+                <section>
+                    <h2>7. Contact</h2>
+                    <p>
+                        Pour toute question ou demande concernant cette politique de confidentialité ou l’utilisation de
+                        vos données dans LightDoc, vous pouvez contacter le développeur à l’adresse suivante :
+                    </p>
+                    <p>
+                        <strong>E-mail : </strong>
+                        <a href="mailto:davidnogueira.dev.pro@gmail.com">davidnogueira.dev.pro@gmail.com</a>
+                        <br />
+                    </p>
+                </section>
+
+                <section>
+                    <h2>8. Modifications de cette politique</h2>
+                    <p>
+                        Cette politique de confidentialité peut être mise à jour afin de refléter l’évolution de
+                        l’application, des services tiers utilisés ou des exigences légales.
+                    </p>
+                    <p>
+                        En cas de modification importante, une indication de mise à jour pourra être affichée dans
+                        l’application ou sur la page de téléchargement de LightDoc.
+                    </p>
+                </section>
+
+                <footer>
+                    <div class="dev-sign">ClearForge Studio – LightDoc</div>
+                    <div>Traitement local. Simplicité avant tout.</div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
