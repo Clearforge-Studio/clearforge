@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ClearforgeStudio – Brandbook</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <style>
+            :root {
+                --forge-blue: #0077b6;
+                --cyber-aqua: #00b4d8;
+                --deep-steel: #023e8a;
+                --digital-mist: #f5faff;
+                --graphite: #0a0a0a;
+                --gold: #f8d77c;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                background: #f3f6fb;
+                color: #111827;
+            }
+
+            .page {
+                position: relative;
+                max-width: 900px;
+                margin: 24px auto;
+                background: #ffffff;
+                padding: 32px 40px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+            }
+
+            .logo {
+                width: 120px;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                margin: 0;
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0 0 12px;
+                line-height: 1.6;
+                font-size: 15px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.2;
+                color: var(--deep-steel);
+                margin-bottom: 16px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                color: #4b5563;
+                margin-bottom: 24px;
+            }
+
+            .section-header {
+                margin: 24px 0 16px;
+                border-radius: 999px;
+                padding: 8px 16px;
+                display: inline-block;
+                background: linear-gradient(90deg, var(--deep-steel), var(--forge-blue));
+                color: #ffffff;
+                font-size: 13px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+            }
+
+            .section-title {
+                font-size: 22px;
+                margin: 8px 0 16px;
+                color: #111827;
+            }
+
+            .two-columns {
+                display: grid;
+                grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+                gap: 24px;
+            }
+
+            .card {
+                background: var(--digital-mist);
+                border-radius: 12px;
+                padding: 16px 18px;
+                border: 1px solid rgba(148, 163, 184, 0.4);
+                margin: 12px 0;
+            }
+
+            .label {
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                color: #6b7280;
+                margin-bottom: 4px;
+            }
+
+            .strong {
+                font-weight: 600;
+            }
+
+            .accent {
+                color: var(--forge-blue);
+                font-weight: 600;
+            }
+
+            .stack {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .bullet {
+                margin-left: 1.25rem;
+                position: relative;
+            }
+
+            .bullet::before {
+                content: '•';
+                position: absolute;
+                left: -1.25rem;
+                top: 0;
+                color: var(--deep-steel);
+                font-weight: 700;
+            }
+
+            .palette-row {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 8px;
+            }
+
+            .swatch {
+                width: 28px;
+                height: 16px;
+                border-radius: 999px;
+                border: 1px solid rgba(15, 23, 42, 0.25);
+            }
+
+            .swatch-label {
+                font-size: 13px;
+            }
+
+            .do-dont-grid {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                gap: 16px;
+            }
+
+            .do-card {
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 14px;
+                background: #ecfdf3;
+                border: 1px solid #bbf7d0;
+            }
+
+            .dont-card {
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 14px;
+                background: #fef2f2;
+                border: 1px solid #fecaca;
+            }
+
+            .tagline-list p {
+                margin-bottom: 6px;
+            }
+
+            .small-muted {
+                font-size: 12px;
+                color: #6b7280;
+                margin-top: 4px;
+            }
+
+            .quote-block {
+                border-left: 3px solid var(--forge-blue);
+                padding-left: 12px;
+                margin: 12px 0;
+                font-size: 14px;
+                color: #374151;
+            }
+
+            hr {
+                border: none;
+                border-top: 1px solid #e5e7eb;
+                margin: 24px 0;
+            }
+
+            @media print {
+                body {
+                    background: #ffffff;
+                }
+
+                .page {
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin: 0 auto;
+                    max-width: 100%;
+                    page-break-after: always;
+                }
+
+                .page:last-child {
+                    page-break-after: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- PAGE 1 : Couverture + Identité -->
+        <div class="page">
+            <img class="logo" src="logo-text.png" alt="" />
+            <h1 class="hero-title">ClearforgeStudio<br />Brandbook</h1>
+            <p class="subtitle">
+                L’ADN officiel de ClearforgeStudio : identité, philosophie, manifesto, ton de voix et cadre visuel.
+            </p>
+
+            <span class="section-header">Identité</span>
+            <h2 class="section-title">Identité de la marque</h2>
+            <p>
+                ClearforgeStudio incarne une forge numérique moderne&nbsp;: création solide, artisanale, et profondément
+                ancrée dans l’univers digital. L’enclume stylisée représente la fiabilité, les pixels symbolisent la
+                transformation et l’innovation.
+            </p>
+
+            <hr />
+
+            <span class="section-header">Fondations</span>
+            <h2 class="section-title">Les trois piliers</h2>
+            <div class="two-columns">
+                <div class="stack">
+                    <div class="card">
+                        <p class="strong">1. L’Artisanat numérique</p>
+                        <p>
+                            Construire avec soin, privilégier la robustesse plutôt que la poudre aux yeux. Être fier de
+                            ce qui sort de l’atelier, même dans les détails invisibles.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p class="strong">2. L’innovation utile</p>
+                        <p>
+                            Explorer, expérimenter, avancer. Mais toujours au service de l’utilisateur réel — celui qui
+                            veut gagner du temps, de l’efficacité, du confort.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <p class="strong">3. L’exécution rapide</p>
+                    <p>
+                        La forge est chaude. Lorsqu’une idée arrive, elle doit être façonnée avant de refroidir. La
+                        vitesse fait partie de l’ADN du studio.
+                    </p>
+                    <p>
+                        ClearforgeStudio, c’est l’alliance rare entre créativité, pragmatisme, efficacité, et vision
+                        long terme.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 : Philosophie -->
+        <div class="page">
+            <span class="section-header">Philosophie</span>
+            <h2 class="section-title">Philosophie ClearforgeStudio</h2>
+
+            <p>
+                ClearforgeStudio existe pour une raison simple&nbsp;:<br />
+                <span class="strong">transformer des idées brutes en outils puissants.</span>
+            </p>
+
+            <p>
+                Le monde du numérique avance vite, trop vite parfois. Beaucoup créent des applications jetables, des
+                projets sans âme, des fonctionnalités qui vivent deux mois puis disparaissent. Ici, l’objectif est
+                différent.
+            </p>
+
+            <div class="quote-block">
+                <p>ClearforgeStudio forge.</p>
+                <p>Avec patience.</p>
+                <p>Avec intention.</p>
+                <p>Avec passion.</p>
+            </div>
+
+            <p>
+                Chaque projet, qu’il s’agisse d’une app mobile, d’une extension Chrome ou d’une plateforme web, naît de
+                ces trois piliers fondamentaux qui guident les décisions produit, le design et la manière de coder.
+            </p>
+
+            <hr />
+
+            <span class="section-header">Voix & ton</span>
+            <h2 class="section-title">Voix & ton de marque</h2>
+            <p>
+                Le ton recherché est <span class="strong">confiant</span>, <span class="strong">moderne</span> et
+                <span class="strong">créatif</span>. ClearforgeStudio est un atelier numérique où chaque projet est
+                façonné avec soin et expertise.
+            </p>
+            <p><span class="strong">Valeurs&nbsp;:</span> créativité, qualité, vitesse, durabilité.</p>
+        </div>
+
+        <!-- PAGE 3 : Manifesto -->
+        <div class="page">
+            <span class="section-header">Manifesto</span>
+            <h2 class="section-title">Manifesto ClearforgeStudio</h2>
+
+            <p class="bullet">Nous croyons que la technologie doit être un compagnon fiable, pas un casse-tête.</p>
+            <p class="bullet">Nous croyons que les grandes idées commencent souvent petites.</p>
+            <p class="bullet">Nous croyons qu’une bonne solution n’a pas besoin de cris pour être entendue.</p>
+            <p class="bullet">Nous croyons que l’élégance vient de la simplicité.</p>
+            <p class="bullet">Nous croyons qu’il est possible de construire vite, mais de construire bien.</p>
+            <p class="bullet">Nous croyons que chaque pixel doit avoir une raison d’être.</p>
+            <p class="bullet">Nous croyons qu’un outil peut être beau, utile et rentable.</p>
+            <p class="bullet">Nous croyons que créer est une forme de liberté.</p>
+            <p class="bullet">Nous croyons que forger le futur est un acte quotidien.</p>
+
+            <br />
+
+            <p>
+                Nous ne créons pas des applications.<br />
+                Nous forgeons des expériences.<br />
+                Nous façonnons des solutions qui durent.<br />
+                Nous avançons à la frontière entre artisanat et innovation.
+            </p>
+
+            <p style="margin-top: 16px; font-weight: 600">
+                Nous sommes ClearforgeStudio.<br />
+                Et nous forgeons le futur, un projet à la fois.
+            </p>
+        </div>
+
+        <!-- PAGE 4 : Positionnement de marque -->
+        <div class="page">
+            <span class="section-header">Positionnement</span>
+            <h2 class="section-title">Positionnement de ClearforgeStudio</h2>
+
+            <p>
+                ClearforgeStudio n’est pas une agence traditionnelle, ni un simple laboratoire d’expérimentations. C’est
+                un <span class="strong">atelier numérique indépendant</span> qui conçoit des produits utiles, élégants
+                et durables.
+            </p>
+
+            <p>
+                Le studio se place à la frontière entre <span class="strong">artisanat</span> et
+                <span class="strong">innovation</span>&nbsp;: chaque projet est façonné avec soin, mais pensé pour une
+                exécution rapide et pragmatique.
+            </p>
+
+            <div class="quote-block" style="margin-top: 16px">
+                <p>
+                    Nous créons des outils qui fonctionnent vraiment, qui durent, et qui aident leurs utilisateurs à
+                    gagner du temps, de la clarté et du contrôle.
+                </p>
+            </div>
+
+            <p>Le positionnement de ClearforgeStudio repose sur quatre axes clés&nbsp;:</p>
+
+            <p class="bullet">Des produits conçus pour être robustes, fiables et sans superflu.</p>
+            <p class="bullet">Une esthétique minimale, précise, où chaque élément a un rôle.</p>
+            <p class="bullet">Une capacité d’exécution rapide grâce à une expertise technique solide.</p>
+            <p class="bullet">Une vision long terme visant à créer un écosystème de solutions cohérentes.</p>
+
+            <p style="margin-top: 20px">
+                ClearforgeStudio se distingue par une approche simple&nbsp;:
+                <span class="strong">faire mieux, pas plus</span>. Construire avec intention. Innover avec mesure.
+                Exécuter avec efficacité.
+            </p>
+        </div>
+
+        <!-- PAGE 5 : Anti-valeurs & Philosophie du temps -->
+        <div class="page">
+            <span class="section-header">Limites</span>
+            <h2 class="section-title">Anti-valeurs ClearforgeStudio</h2>
+
+            <p>
+                Définir ce que ClearforgeStudio refuse de faire est aussi important que définir ce qu’il défend. Ces
+                anti-valeurs sont des lignes rouges claires.
+            </p>
+
+            <p class="bullet">Nous ne créons pas de bruit fonctionnel pour gonfler une fiche produit.</p>
+            <p class="bullet">Nous ne ajoutons pas de features qui n’ont pas de sens pour l’utilisateur.</p>
+            <p class="bullet">Nous ne sacrifions jamais la clarté au profit de l’effet “wahou”.</p>
+            <p class="bullet">Nous ne lançons pas des projets sans âme, juste pour suivre une tendance.</p>
+            <p class="bullet">Nous ne faisons pas du tape-à-l’œil qui vieillit mal.</p>
+            <p class="bullet">Nous ne livrons pas “vite” si cela signifie “mal fait”.</p>
+            <p class="bullet">Nous ne trichons pas avec la qualité technique ou l’expérience utilisateur.</p>
+
+            <hr />
+
+            <span class="section-header">Temps</span>
+            <h2 class="section-title">Philosophie du temps</h2>
+
+            <p>Le temps n’est pas une contrainte&nbsp;: c’est un matériau de travail.</p>
+
+            <div class="quote-block">
+                <p>Chez ClearforgeStudio, nous forgeons vite, mais jamais dans la précipitation.</p>
+                <p>La vitesse est une compétence, pas un sacrifice.</p>
+            </div>
+
+            <p>
+                Le temps économisé pour l’utilisateur est une valeur. Le temps consacré au détail est un investissement.
+            </p>
+
+            <p>Chaque décision de design ou de développement vise à respecter le temps de chacun&nbsp;:</p>
+
+            <p class="bullet">Réduire le temps perdu dans les interfaces confuses.</p>
+            <p class="bullet">Éviter aux utilisateurs les détours inutiles.</p>
+            <p class="bullet">Limiter les frictions cognitives à chaque interaction.</p>
+            <p class="bullet">Construire des produits qui durent, pour ne pas être remplacés tous les six mois.</p>
+        </div>
+
+        <!-- PAGE 6 : Éthique du code -->
+        <div class="page">
+            <span class="section-header">Code</span>
+            <h2 class="section-title">Éthique du code ClearforgeStudio</h2>
+
+            <p>
+                Derrière chaque interface ClearforgeStudio, il y a une exigence technique claire&nbsp;: le code n’est
+                pas un détail invisible, c’est l’ossature du produit.
+            </p>
+
+            <div class="card">
+                <p class="strong">Principes d’éthique du code</p>
+                <p class="bullet">Un code doit pouvoir être relu et compris sans traduction.</p>
+                <p class="bullet">Une architecture doit pouvoir évoluer sans tout casser.</p>
+                <p class="bullet">Une fonctionnalité doit être nécessaire pour exister.</p>
+                <p class="bullet">Une dette technique doit être assumée, planifiée et résorbée, pas ignorée.</p>
+                <p class="bullet">Un produit doit pouvoir être maintenu par quelqu’un qui ne l’a pas créé.</p>
+            </div>
+
+            <p>
+                L’objectif n’est pas de “faire tourner” un projet, mais de construire une base saine, stable,
+                transmissible.
+            </p>
+
+            <div class="quote-block">
+                <p>
+                    Un bon code ne se voit pas, mais il se ressent dans la fluidité, la stabilité et la confiance que le
+                    produit inspire.
+                </p>
+            </div>
+        </div>
+
+        <!-- PAGE 7 : Émotions & métaphores de marque -->
+        <div class="page">
+            <span class="section-header">Ressenti</span>
+            <h2 class="section-title">Les émotions ClearforgeStudio</h2>
+
+            <p>
+                Un produit ClearforgeStudio ne doit pas seulement “fonctionner”&nbsp;: il doit laisser une impression
+                précise. Quatre émotions clés guident l’expérience.
+            </p>
+
+            <p class="bullet"><span class="strong">Confiance</span> — Le produit est solide, maîtrisé, fiable.</p>
+            <p class="bullet">
+                <span class="strong">Simplicité</span> — Tout est clair, lisible, compréhensible sans effort.
+            </p>
+            <p class="bullet">
+                <span class="strong">Fluidité</span> — L’utilisation est fluide, les frictions sont minimales.
+            </p>
+            <p class="bullet">
+                <span class="strong">Sérénité</span> — L’interface apaise, elle n’agresse ni l’œil, ni l’esprit.
+            </p>
+
+            <hr />
+
+            <span class="section-header">Imaginaires</span>
+            <h2 class="section-title">Métaphores de la marque</h2>
+
+            <p>
+                Pour décrire ClearforgeStudio, certaines images reviennent souvent. Elles servent de boussole créative
+                pour le design, le ton et les décisions produit.
+            </p>
+
+            <div class="card">
+                <p class="strong">L’enclume numérique</p>
+                <p>
+                    Solide, stable, précise. Chaque projet est une pièce forgée, pensée pour encaisser le temps et
+                    l’usage.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="strong">Un atelier silencieux</p>
+                <p>
+                    Pas de bruit inutile, pas de surenchère. Juste un lieu où chaque élément trouve sa place, avec
+                    intention.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="strong">La lumière dans la forge</p>
+                <p>
+                    Une clarté qui traverse la matière brute. Rendre lisible ce qui est complexe, rendre évident ce qui
+                    semblait lointain.
+                </p>
+            </div>
+
+            <p style="margin-top: 16px">
+                Ces métaphores peuvent être utilisées dans la communication, le design ou les briefs créatifs pour
+                garder l’esprit ClearforgeStudio cohérent, quel que soit le support.
+            </p>
+        </div>
+
+        <!-- PAGE 8 : Palette, Typos, Do/Don't, Slogans -->
+        <div class="page">
+            <span class="section-header">Système visuel</span>
+            <h2 class="section-title">Palette & typographies</h2>
+
+            <div class="two-columns">
+                <div>
+                    <div class="label">Palette principale</div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #0077b6"></div>
+                        <div class="swatch-label">Forge Blue — #0077B6</div>
+                    </div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #00b4d8"></div>
+                        <div class="swatch-label">Cyber Aqua — #00B4D8</div>
+                    </div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #023e8a"></div>
+                        <div class="swatch-label">Deep Steel — #023E8A</div>
+                    </div>
+
+                    <div class="label" style="margin-top: 12px">Palette secondaire</div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #caf0f8"></div>
+                        <div class="swatch-label">Digital Mist — #CAF0F8</div>
+                    </div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #0a0a0a"></div>
+                        <div class="swatch-label">Graphite Black — #0A0A0A</div>
+                    </div>
+
+                    <div class="label" style="margin-top: 12px">Couleurs premium</div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #f8d77c"></div>
+                        <div class="swatch-label">Royal Forge Gold — #F8D77C</div>
+                    </div>
+                    <div class="palette-row">
+                        <div class="swatch" style="background: #dde1e7"></div>
+                        <div class="swatch-label">Iron Silver — #DDE1E7</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="label">Typographies</div>
+                    <div class="card">
+                        <p>
+                            <span class="strong">Montserrat Bold</span><br />
+                            Titres modernes, solides, utilisés pour les headings et call-to-actions.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p>
+                            <span class="strong">Inter</span><br />
+                            Police d’interface, neutre, extrêmement lisible sur web et mobile.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <p>
+                            <span class="strong">Sora</span><br />
+                            Pour les accents futuristes, chiffres, labels ou éléments différenciants.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+
+            <span class="section-header">Usage du logo</span>
+            <h2 class="section-title">Do & Don’t</h2>
+
+            <div class="do-dont-grid">
+                <div class="do-card">
+                    <p class="strong">DO :</p>
+                    <p class="bullet">Utiliser le logo sur un fond clair ou sombre propre.</p>
+                    <p class="bullet">Respecter la palette officielle.</p>
+                    <p class="bullet">Conserver les proportions et marges de respiration.</p>
+                    <p class="bullet">Préserver le dégradé et les valeurs de contraste.</p>
+                </div>
+                <div class="dont-card">
+                    <p class="strong">DON’T :</p>
+                    <p class="bullet">Ne pas déformer le logo (étirer, compresser, tordre).</p>
+                    <p class="bullet">Ne pas recolorer arbitrairement l’enclume ou les pixels.</p>
+                    <p class="bullet">Ne pas ajouter d’ombres, contours ou effets non prévus.</p>
+                    <p class="bullet">Ne pas placer le logo sur un fond visuellement chaotique.</p>
+                </div>
+            </div>
+
+            <hr />
+
+            <span class="section-header">Signature</span>
+            <h2 class="section-title">Slogans & accroches</h2>
+            <div class="tagline-list">
+                <p>• Forge the Future.</p>
+                <p>• Votre idée. Notre forge.</p>
+                <p>• Digital Craftsmanship.</p>
+                <p>• L’atelier numérique nouvelle génération.</p>
+            </div>
+            <p class="small-muted">
+                Ces lignes peuvent être utilisées en baseline, header de site, pitch rapide ou documentation.
+            </p>
+        </div>
+    </body>
+</html>
